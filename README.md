@@ -58,9 +58,18 @@ Producer → Kafka Topic → Consumer → ML Model → Prediction
 ---
 
 ## 📁 Project Structure
-<b>text&lt;/b&gt; streamguard-fraud-detection/ ├── kafka/ │   ├── producer.py │   └── consumer.py ├── model/ │   ├── fraud_model.pkl │   ├── scaler.pkl │   └── train_model.py ├── .gitignore └── README.md &lt;b&gt;</b>
-</pre>
-
+```text
+streamguard-fraud-detection/
+├── kafka/
+│   ├── producer.py
+│   └── consumer.py
+├── model/
+│   ├── fraud_model.pkl
+│   ├── scaler.pkl
+│   └── train_model.py
+├── .gitignore
+└── README.md
+```
 ---
 
 ## 🚀 How to Run
@@ -85,6 +94,7 @@ python kafka/producer.py
 ---
 
 ## 📊 Model Details
+
 __- Type:__ Supervised Classification
 __- Input:__ Transaction features
 __- Output:__
