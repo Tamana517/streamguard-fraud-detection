@@ -108,7 +108,8 @@ python kafka/producer.py
 - Recall (most critical for fraud detection)
 - F1-score
 - Accuracy
-👉 __Recall is prioritized__ because missing fraud is more costly than false alerts.
+
+👉 **Recall is prioritized** because missing fraud is more costly than false alerts.
 
 ---
 
@@ -130,7 +131,7 @@ python kafka/producer.py
 ---
 
 ## 👨‍💻 Author
-__Tamana__
+**Tamana**
 
 ---
 
