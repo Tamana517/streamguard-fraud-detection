@@ -46,6 +46,7 @@ It processes streaming financial transactions and predicts fraud instantly using
 ## 🧠 System Architecture
 Producer → Kafka Topic → Consumer → ML Model → Prediction
 
+---
 
 ### 🔄 Workflow
 - Producer sends transaction data
@@ -58,7 +59,6 @@ Producer → Kafka Topic → Consumer → ML Model → Prediction
 
 ## 📁 Project Structure
 streamguard-fraud-detection/
-
 ├── kafka/
 │ ├── producer.py
 │ ├── consumer.py
@@ -82,28 +82,34 @@ Ensure Kafka broker is running locally.
 ```bash
 kafka-topics.bat --create --topic transactions --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
-### **3. Start Consumer**
+### 3. Start Consumer
 python kafka/consumer.py
 
-### **4. Start Producer**
+### 4. Start Producer
 python kafka/producer.py
 
-**📊 Model Details**
-**- Type:** Supervised Classification
-**- Input:** Transaction features
-**- Output:**
+---
+
+📊 Model Details
+- Type: Supervised Classification
+- Input: Transaction features
+- Output:
   - 0 → Normal Transaction
   - 1 → Fraudulent Transaction
-**- Preprocessing:** StandardScaler normalization
+- Preprocessing: StandardScaler normalization
 
-**📈 Evaluation Metrics**
+---
+
+📈 Evaluation Metrics
 - Precision
-- Recall **(most critical for fraud detection)**
+- Recall (most critical for fraud detection)
 - F1-score
 - Accuracy
 👉 Recall is prioritized because missing fraud is more costly than false alerts.
 
-**✨ Key Features**
+---
+
+✨ Key Features
 - Real-time Kafka streaming pipeline
 - Producer–Consumer architecture
 - Machine Learning-based fraud detection
@@ -111,18 +117,30 @@ python kafka/producer.py
 - Logging & monitoring system
 - End-to-end ML pipeline
 
-**⚠️ Important Notes**
+---
+
+⚠️ Important Notes
 - Dataset not included due to GitHub size limits
 - Dataset used: Kaggle Credit Card Fraud Dataset
 - Large files excluded using .gitignore
 
-**👨‍💻 Author**
-**Tamana**
+---
 
-**🚀 Future Improvements**
+👨‍💻 Author
+Tamana
+
+---
+
+🚀 Future Improvements
 - Dockerize entire system
 - Deploy using AWS MSK Kafka
 - Add Streamlit real-time dashboard
 - Improve ML model with advanced algorithms
 
-<p align="center"> ⭐ If you like this project, consider giving it a star! </p> ``
+---
+
+<p align="center">
+⭐ If you like this project, consider giving it a star!
+</p>
+
+---
