@@ -95,13 +95,12 @@ python kafka/producer.py
 
 ## 📊 Model Details
 
-__- Type:__ Supervised Classification
-__- Input:__ Transaction features
-__- Output:__
-  - 0 → Normal Transaction
-  - 1 → Fraudulent Transaction
-__- Preprocessing:__ StandardScaler normalization
-
+- **Type:** Supervised Classification
+- **Input:** Transaction features
+- **Output:**
+  - `0` → Normal Transaction
+  - `1` → Fraudulent Transaction
+- **Preprocessing:** StandardScaler normalization
 ---
 
 ## 📈 Evaluation Metrics
