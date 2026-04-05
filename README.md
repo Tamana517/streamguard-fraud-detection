@@ -58,20 +58,8 @@ Producer → Kafka Topic → Consumer → ML Model → Prediction
 ---
 
 ## 📁 Project Structure
-streamguard-fraud-detection/
-
-├── kafka/
-│ ├── producer.py
-│ ├── consumer.py
-│
-├── model/
-│ ├── fraud_model.pkl
-│ ├── scaler.pkl
-│ ├── train_model.py
-│
-├── .gitignore
-└── README.md
-
+<b>text&lt;/b&gt; streamguard-fraud-detection/ ├── kafka/ │   ├── producer.py │   └── consumer.py ├── model/ │   ├── fraud_model.pkl │   ├── scaler.pkl │   └── train_model.py ├── .gitignore └── README.md &lt;b&gt;</b>
+</pre>
 
 ---
 
@@ -80,51 +68,71 @@ streamguard-fraud-detection/
 ### 1️⃣ Start Kafka
 Ensure Kafka broker is running locally.
 
----
-
 ### 2️⃣ Create Kafka Topic
 ```bash
 kafka-topics.bat --create --topic transactions --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+```
 
-3️⃣ Run Consumer (Start First)
+### 3️⃣ Run Consumer (Start First)
+```bash
 python kafka/consumer.py
+```
 
-4️⃣ Run Producer
+### 4️⃣ Run Producer
+```bash
 python kafka/producer.py
+```
+---
 
-📊 Model Details
-Type: Supervised Classification
-Input: Transaction features
-Output:
-0 → Normal Transaction
-1 → Fraudulent Transaction
-Preprocessing: StandardScaler normalization
-📈 Evaluation Metrics
-Precision
-Recall (most critical for fraud detection)
-F1-score
-Accuracy
+## 📊 Model Details
+__- Type:__ Supervised Classification
+__- Input:__ Transaction features
+__- Output:__
+  - 0 → Normal Transaction
+  - 1 → Fraudulent Transaction
+__- Preprocessing:__ StandardScaler normalization
 
-👉 Recall is prioritized because missing fraud is more costly than false alerts.
+---
 
-✨ Key Features
-Real-time Kafka streaming pipeline
-Producer–Consumer architecture
-Machine Learning-based fraud detection
-Scalable system design
-Logging & monitoring system
-End-to-end ML pipeline
-⚠️ Important Notes
-Dataset not included due to GitHub size limits
-Dataset used: Kaggle Credit Card Fraud Dataset
-Large files excluded using .gitignore
-👨‍💻 Author
+## 📈 Evaluation Metrics
+- Precision
+- Recall (most critical for fraud detection)
+- F1-score
+- Accuracy
+👉 __Recall is prioritized__ because missing fraud is more costly than false alerts.
 
-Tamana
+---
 
-🚀 Future Improvements
-Dockerize entire system
-Deploy using AWS MSK Kafka
-Add Streamlit real-time dashboard
-Improve ML model with advanced algorithms
-<p align="center"> ⭐ If you like this project, consider giving it a star! </p> ```
+## ✨ Key Features
+- Real-time Kafka streaming pipeline
+- Producer–Consumer architecture
+- Machine Learning-based fraud detection
+- Scalable system design
+- Logging & monitoring system
+- End-to-end ML pipeline
+
+---
+
+## ⚠️ Important Notes
+- Dataset not included due to GitHub size limits
+- Dataset used: Kaggle Credit Card Fraud Dataset
+- Large files excluded using .gitignore
+
+---
+
+## 👨‍💻 Author
+__Tamana__
+
+---
+
+## 🚀 Future Improvements
+- Dockerize entire system
+- Deploy using AWS MSK Kafka
+- Add Streamlit real-time dashboard
+- Improve ML model with advanced algorithms
+
+---
+
+<p align="center"> ⭐ If you like this project, consider giving it a star! </p> 
+
+---
