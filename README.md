@@ -59,6 +59,7 @@ Producer → Kafka Topic → Consumer → ML Model → Prediction
 
 ## 📁 Project Structure
 streamguard-fraud-detection/
+
 ├── kafka/
 │ ├── producer.py
 │ ├── consumer.py
@@ -71,76 +72,59 @@ streamguard-fraud-detection/
 ├── .gitignore
 └── README.md
 
+
 ---
 
 ## 🚀 How to Run
 
-### 1. Start Kafka
+### 1️⃣ Start Kafka
 Ensure Kafka broker is running locally.
 
-### 2. Create Topic
+---
+
+### 2️⃣ Create Kafka Topic
 ```bash
 kafka-topics.bat --create --topic transactions --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
-3. Start Consumer
+3️⃣ Run Consumer (Start First)
 python kafka/consumer.py
 
-4. Start Producer
+4️⃣ Run Producer
 python kafka/producer.py
 
----
-
 📊 Model Details
-- Type: Supervised Classification
-- Input: Transaction features
-- Output:
-  - 0 → Normal Transaction
-  - 1 → Fraudulent Transaction
-- Preprocessing: StandardScaler normalization
-
----
-
+Type: Supervised Classification
+Input: Transaction features
+Output:
+0 → Normal Transaction
+1 → Fraudulent Transaction
+Preprocessing: StandardScaler normalization
 📈 Evaluation Metrics
-- Precision
-- Recall (most critical for fraud detection)
-- F1-score
-- Accuracy
+Precision
+Recall (most critical for fraud detection)
+F1-score
+Accuracy
+
 👉 Recall is prioritized because missing fraud is more costly than false alerts.
 
----
-
 ✨ Key Features
-- Real-time Kafka streaming pipeline
-- Producer–Consumer architecture
-- Machine Learning-based fraud detection
-- Scalable system design
-- Logging & monitoring system
-- End-to-end ML pipeline
-
----
-
+Real-time Kafka streaming pipeline
+Producer–Consumer architecture
+Machine Learning-based fraud detection
+Scalable system design
+Logging & monitoring system
+End-to-end ML pipeline
 ⚠️ Important Notes
-- Dataset not included due to GitHub size limits
-- Dataset used: Kaggle Credit Card Fraud Dataset
-- Large files excluded using .gitignore
-
----
-
+Dataset not included due to GitHub size limits
+Dataset used: Kaggle Credit Card Fraud Dataset
+Large files excluded using .gitignore
 👨‍💻 Author
+
 Tamana
 
----
-
 🚀 Future Improvements
-- Dockerize entire system
-- Deploy using AWS MSK Kafka
-- Add Streamlit real-time dashboard
-- Improve ML model with advanced algorithms
-
----
-
-<p align="center">
-⭐ If you like this project, consider giving it a star!
-</p>
-
----
+Dockerize entire system
+Deploy using AWS MSK Kafka
+Add Streamlit real-time dashboard
+Improve ML model with advanced algorithms
+<p align="center"> ⭐ If you like this project, consider giving it a star! </p> ```
