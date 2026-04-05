@@ -82,10 +82,10 @@ Ensure Kafka broker is running locally.
 ```bash
 kafka-topics.bat --create --topic transactions --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
-### 3. Start Consumer
+3. Start Consumer
 python kafka/consumer.py
 
-### 4. Start Producer
+4. Start Producer
 python kafka/producer.py
 
 ---
